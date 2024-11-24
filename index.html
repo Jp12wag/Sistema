@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,7 @@
     <script>
         // Enviar el formulario
         async function enviarFormulario(event) {
-            event.preventDefault(); 
+            event.preventDefault();
             const nombre = document.getElementById('nombre').value;
             const email = document.getElementById('email').value;
             const mensaje = document.getElementById('mensaje').value;
@@ -66,17 +67,19 @@
             }
         }
 
-        // Eliminar un formulario
         async function eliminarFormulario(id) {
-            console.log(id)
             try {
                 const response = await fetch(`https://api-self-pi.vercel.app/api/formulario/${id}`, {
                     method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Si es necesario, agregar un token de autorización
+                        // 'Authorization': 'Bearer <tu_token>'
+                    },
                 });
 
                 if (response.ok) {
                     alert('Formulario eliminado con éxito.');
-                    cargarFormularios(); // Actualizar la lista
                 } else {
                     console.error('Error al eliminar formulario:', response.status);
                     alert('Error al eliminar el formulario.');
@@ -87,14 +90,16 @@
             }
         }
 
+
         // Cargar formularios al cargar la página
         window.onload = cargarFormularios;
     </script>
 </head>
+
 <body>
     <form onsubmit="enviarFormulario(event)">
         <h1>Formulario de Contacto</h1>
-        
+
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" required>
 
@@ -110,4 +115,5 @@
     <h2>Lista de Formularios</h2>
     <ul id="lista-formularios"></ul>
 </body>
+
 </html>
