@@ -1,77 +1,130 @@
-      
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-      
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f4f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #333;
-        }
+/* Estilo del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 1rem;
+    color: #333;
+}
 
-        form {
-            background-color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
+/* Estilo del formulario */
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 2rem;
+}
 
-      
-        h1 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
 
-      
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
 
-        input, textarea {
-            width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
 
-        input:focus, textarea:focus {
-            border-color: #007bff;
-            outline: none;
-        }
+input:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
 
-        textarea {
-            resize: vertical;
-        }
+textarea {
+    resize: vertical;
+}
 
-        
-        button {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+/* Botón del formulario */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        button:hover {
-            background-color: #0056b3;
-        }
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo de la lista */
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #444;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li strong {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Botón de eliminar */
+li button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+li button:hover {
+    background-color: #cc0000;
+}
